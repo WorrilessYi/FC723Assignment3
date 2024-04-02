@@ -1,18 +1,5 @@
-class EuclideanAlgorithm:
-    def gcd(self, a, b):
-        """finds the Greatest common divisor"""
-        if a == 0:
-            # GCD(0, b) = b
-            return b
-        elif b == 0:
-            # GCD(a, 0) = a
-            return a
-        else:
-            # a = b * quotient + remainder
-            remainder = a % b
-            # call the function again
-            return self.gcd(b, remainder)
-
+from Euclidean import EuclideanAlgorithm
+eu = EuclideanAlgorithm()
 
 def get_input():
     # Input validation loop
@@ -25,9 +12,6 @@ def get_input():
             return n1, n2
         except ValueError as e:
             print("Invalid input:", e)
-
-
-eu = EuclideanAlgorithm()
 
 
 def user_interface():
