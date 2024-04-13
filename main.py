@@ -1,12 +1,15 @@
 from Euclidean import EuclideanAlgorithm
 eu = EuclideanAlgorithm()
 
+
 def get_input():
     # Input validation loop
     while True:
         try:
-            n1 = int(input("Enter the first number: "))
-            n2 = int(input("Enter the second number: "))
+            inp = input("Enter the numbers: ")
+            n1, n2 = inp.split(",")
+            n1 = int(n1)
+            n2 = int(n2)
             if n1 <= 0 or n2 <= 0:
                 raise ValueError("Input must be positive integers!")
             return n1, n2
